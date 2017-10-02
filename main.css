@@ -1,0 +1,26 @@
+/*Less.css: My first less file*/
+body {
+  background-color: #f7eded;
+  margin: 20px;
+  padding: 10px;
+}
+h1 {
+  color: #a2d587;
+  text-align: center;
+}
+section {
+  border: 1px solid black;
+}
+p {
+  background-color: teal;
+  border-bottom: 1px dashed green;
+  color: #FFFFFF;
+  text-align: center;
+  text-shadow: 0px 5px 10px #969696;
+}
+footer {
+  text-align: center;
+  text-shadow: 0px 5px 10px #969696;
+  margin-top: 10px;
+  padding: 50px;
+}

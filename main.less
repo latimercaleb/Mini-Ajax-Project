@@ -1,0 +1,41 @@
+/*Less.css: My first less file*/
+/* I really gotta pick up something that recompiles my css for me */
+// Variables
+@bgcolor: #f7eded;
+@textColor: #FFFFFF;
+@headerColor: #a2d587;
+
+// mixin
+.text(){
+  text-align: center;
+  text-shadow: 0px 5px 10px rgba(150, 150, 150, 1);
+}
+
+/*Tag styles*/
+body {
+   background-color: @bgcolor;
+   margin: 20px;
+   padding: 10px;
+}
+
+h1 {
+  color: @headerColor;
+  text-align: center;
+}
+
+section {
+  border: 1px solid black;
+}
+
+p {
+  background-color: teal;
+  border-bottom: 1px dashed green;
+   color: @textColor;
+   .text;
+}
+
+footer{
+  .text;
+  margin-top: 10px;
+  padding: 50px;
+}
