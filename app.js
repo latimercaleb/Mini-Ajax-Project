@@ -73,19 +73,29 @@ function writeData(data) {
 }
 
 // in jquery
+var jCount = 1;
+
 function jSend() {
-      $.ajax({
-            url: "https://learnwebcode.github.io/json-example/animals-1.json",
-            type: "GET",
-            crossDomain: true, // order matters for CORS
-            dataType: "json", // This must be here, and must have json
-            success: function(response) {
-                  // Iterate over the response collection
-                  // Follow the format of writeData method
-                  // Test...
-            },
-            error: function(xhr, status) {
-                  alert("error");
-            }
-      });
+      if (jCount <= 3) {
+            $.ajax({
+                  url: "https://learnwebcode.github.io/json-example/animals-" + jCount + ".json",
+                  type: "GET",
+                  crossDomain: true, // order matters for CORS
+                  dataType: "json", // This must be here, and must have json
+                  success: function(response) {
+                        // Iterate over the response collection
+                        console.log(response);
+                        for (var obj in response) {
+                              $('#container').append("<p class='content'>" + response[obj].name + " is a " + response[obj].species + " that wants to eat  " + response[obj].foods.likes.toString() + " and hates to eat " + response[obj].foods.dislikes.toString() + "</p>");
+                        }
+                        // Apply sass
+                  },
+                  error: function(xhr, status) {
+                        alert("error");
+                  }
+            });
+            jCount++;
+      } else {
+            $("#jbtn").css("opacity", 0);
+      }
 }
