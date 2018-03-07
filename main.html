@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+      <title>Ajax Tutorial</title>
+      <link rel='stylesheet' type='text/css' href='main.css' />
+      <meta name="viewport" content="width=device-width,initial-scale=1.0">
+      <meta charset="UTF-8">
+</head>
+
+<body>
+      <header>
+            <h1>Simple Ajax and JSON tutorial</h1>
+            <p>Page follows a simple tutorial about how ajax works</p>
+      </header>
+      <main>
+            <section>
+                  <!-- vanilla JS button -->
+                  <button id='btn' onclick="sendData()">Retrieve Vanilla Way</button>
+                  <!-- jQuery Button -->
+                  <button id='jbtn' onclick="jSend()">Retrieve Data jQuery Way</button>
+            </section>
+            <section id='container'></section>
+            <footer>
+                  <small>Built as a simple experiment</small>
+            </footer>
+      </main>
+      <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+      <script src='app.js'></script>
+</body>
+
+</html>
